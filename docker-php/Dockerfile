@@ -1,5 +1,5 @@
 FROM php:8.2-fpm
 
-COPY index.php /var/www/html/
+COPY docker-php/index.php /var/www/html/
 
 EXPOSE 9000
