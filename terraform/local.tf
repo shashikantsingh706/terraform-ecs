@@ -1,0 +1,3 @@
+locals {
+  services = ["nginx", "php"]
+}
