@@ -9,7 +9,7 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v3.1.0
     - name: Docker build nginx and Dont Push
-      id: build-image
+      id: build-image-nginx
       env:
         ECR_REGISTRY: "891377310654.dkr.ecr.us-east-2.amazonaws.com"
         ECR_REPOSITORY: "nginx"
@@ -17,8 +17,8 @@ jobs:
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . -f docker-nginx/Dockerfile
     
-    - name: Docker build nginx and Dont Push
-      id: build-image
+    - name: Docker build php and Dont Push
+      id: build-image-php
       env:
         ECR_REGISTRY: "891377310654.dkr.ecr.us-east-2.amazonaws.com"
         ECR_REPOSITORY: "php"
